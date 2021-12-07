@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- Font awesome icon -->
+    <link rel="stylesheet" href="../asset/css/font-awesome.css">
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="../asset/css/base.css">
+    <!-- Main-Form style CSS -->
+    <link rel="stylesheet" href="../asset/css/syle_form.css">
+</head>
+<body>
+    <!-- Form header begin -->
+    <section class="form-header">
+        <div class="form-header--container container">
+            <div class="row justify-content-between align-items-center">
+                <div class="form-header--info row align-items-center">
+                    <div class="logo form-header--item">
+                        <a href="./form.html">
+                            <span>EZ</span>form
+                        </a>
+                    </div>
+                    <div class="form-title form-header--item">
+                        <h3>Blank Form</h3>
+                    </div>
+                </div>
+                <div class="form-header--submit row">
+                    <div class="btn-send form-header--item outer-shadow hover-in-shadow">
+                        <a href="#">Send</a>
+                    </div>
+                    <div class="user-avata form-header--item">
+                        <img src="../asset/img/user/user-avt-main.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="form-content--views">
+                    <div class="view--options">
+                        <div class="view--question view--options-item active">
+                            <span>Questions</span>
+                        </div>
+                        <div class="view--response view--options-item">
+                            <span>Responses</span> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Form header end -->
+
+    <!-- Form body--question begin -->
+    <section class="form-body container">
+        <div class="form-body--questions container-m">
+            <!-- Form-body navigation -->
+            <div class="form-question--nav outer-shadow">
+                <div class="add-personal-info">
+                    <i class="fas fa-user-plus"></i>                    
+                </div>
+                <div class="add-title">
+                    <i class="fas fa-align-justify"></i>                
+                </div>
+                <div class="add-description">
+                    <i class="fas fa-indent"></i>                
+                </div>
+                <div class="add-input">
+                    <i class="fas fa-stream"></i>                    
+                </div>
+                <div class="add-checkbox">
+                    <i class="far fa-check-circle"></i>                    
+                </div>
+                <div class="add-checkbox-descript">
+                    <i class="fas fa-check-square"></i>                    
+                </div>
+                <div class="add-checkbox-advancedOptions">
+                    <i class="fas fa-ellipsis-h"></i>                    
+                </div>
+            </div>
+
+            <!-- Form-body body -->
+            <div class="form-question--container">
+                <form method="POST">
+                    <div class="form-question--title w-100 outer-shadow">
+                        <input type="text" name="form--title" id="form--title" class="form--title" value="Blank form" required>
+                        <div class="section--endline--inner"></div>
+                        <input type="text" name="form--sub-title" id="form--sub-title" class="form--sub-title" placeholder="Form description">
+                        <div class="section--endline--inner"></div>
+                    </div>
+                    <div class="form-question--body outer-shadow">
+                        <!-- Personal info group begin -->
+                        <div class="form-question--personal-info-group">
+                            <div class="row">
+                                <!-- name -->
+                                <div class="form-question--fullName w-50 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Full name">
+                                    <input type="text" name="user-0-fullName" id="user-0-fullName" class="form-control" required>
+                                </div>
+                                <!-- email -->
+                                <div class="form-question--email w-50 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Email">
+                                    <input type="email" name="user-0-email" id="user-0-email" class="form-control" placeholder="email@domain.com" required>
+                                </div>
+                                <!-- birthday -->
+                                <div class="form-question--birthday w-50 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Birthday">
+                                    <input type="date" name="user-0-birthday" id="user-0-birthday" class="form-control" required>
+                                </div>
+                                <!-- phone -->
+                                <div class="form-question--phone w-50 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Phone number">
+                                    <input type="tel" name="user-0-phone" id="user-0-phone" class="form-control" pattern="[0-9]{10}" placeholder="0123456789" required>
+                                </div>
+                                <!-- address -->
+                                <div class="form-question--address w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Address">
+                                    <input type="text" name="user-0-address" id="user-0-address" class="form-control" placeholder="Street - City - Country" required>
+                                </div>
+                                <!-- CCCD -->
+                                <div class="form-question--CCCD w-50 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Cityzen Indentify number">
+                                    <input type="number" name="user-0-CCCD" id="user-0-CCCD" class="form-control" required>
+                                </div>
+                                <!-- works -->
+                                <div class="form-question--works w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Works">
+                                    <input type="text" name="user-0-works" id="user-0-works" class="form-control" placeholder="Company Name" required>
+                                </div>
+                                <div class="form--endline--inner"></div>
+                            </div>
+                        </div>
+                        <!-- Personal info group end -->
+
+                        <!-- Question title begin -->
+                        <div class="form-question--titleBox-group">
+                            <div class="row">
+                                <div class="form-question--titleBox w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="question--title-0" id="question--title-0" class="question--title" placeholder="Question Title">
+                                    <div class="section--endline--inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question title end -->
+
+                        <!-- Question description begin -->
+                        <div class="form-question--descriptBox-group">
+                            <div class="row">
+                                <div class="form-question--descriptBox w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="question-descript-0" id="question-descript-0" class="form-control--descript" placeholder="Question description">
+                                    <div class="section--endline--inner"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question description end -->
+
+                        <!-- Question input begin -->
+                        <div class="form-question--inputBox-group">
+                            <div class="row">
+                                <div class="form-question--inputBox w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Input box description">
+                                    <input type="text" name="user-0-inputBox" id="user-0-inputBox" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Question input end -->
+
+                        <!-- Questin radio begin -->
+                        <div class="form-question--radioBox-group">
+                            <div class="row">
+                                <div class="form-question--radioBox w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <button type="button" class="btn--add-radio-field">
+                                        <i class="far fa-plus-square"></i>
+                                    </button>
+                                    <div class="form-radio-check w-100">
+                                        <input type="radio" name="group-radio-0" id="ques-radio-0" class="form-radioCheck-input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" value="Radio box description">
+                                    </div> 
+                                    
+                                    <div class="form-radio-check w-100">
+                                        <input type="radio" name="group-radio-0" id="ques-radio-1" class="form-radioCheck-input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" value="Radio box description">
+                                    </div>
+
+                                    <div class="form-radio-check w-100">
+                                        <input type="radio" name="group-radio-0" id="ques-radio-2" class="form-radioCheck-input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" value="Radio box description">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Questin radio end -->
+
+                        <!-- Questin checkbox begin -->
+                        <!-- Questin checkbox end -->
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- Form body--question end -->
+
+</body>
+</html>
