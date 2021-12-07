@@ -269,6 +269,12 @@ input.disabled{
 .form-control:focus{
     box-shadow: inset 0px 0px 0px #b8b9be, inset 0px 0px 0px #fff;
 }
+.form-question--inputBox-group{
+    padding: 8px 0;
+}
+.form-question--check-group{
+    padding: 8px 0;
+}
 .form-control--descript{
     display: inline-block;
     width: 100%;
@@ -289,18 +295,19 @@ input.disabled{
     padding: 8px 8px 8px 0;
     border: none;
 }
-.form-radio-check{
+.form-check--container{
     position: relative;
     display: block;
     padding: 8px 0;
 }
-.form-radioCheck-input{
+.form-check--input{
     display: inline-block;
-    margin-left: 8px;
+    padding-left: 8px;
 }
 .form-check--descript{
     border: none;
     display: inline-block;
+    width: 90%;
     padding-left: 1rem;
     line-height: 16px;
     margin-bottom: 0;
@@ -310,7 +317,7 @@ input.disabled{
     background-color: var(--white-color);
     position: absolute;
     bottom: -12px;
-    left: 23px;
+    left: 0px;
 }
 .btn--add-radio-field i{
     cursor: pointer;

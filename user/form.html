@@ -175,7 +175,7 @@
                                     <button type="button" class="btn--remove-asw-field">
                                         <i class="fas fa-trash-alt"></i>
                                     </button>
-                                    <input type="text" name="question-descript-0" id="question-descript-0" class="form-control--descript" placeholder="Question description">
+                                    <input type="text" name="question-descript-0" id="question-descript-0" class="form-control--descript" placeholder="Question description (Optional)">
                                     <div class="section--endline--inner"></div>
                                 </div>
                             </div>
@@ -197,7 +197,7 @@
                         <!-- Question input end -->
 
                         <!-- Questin radio begin -->
-                        <div class="form-question--radioBox-group">
+                        <div class="form-question--check-group">
                             <div class="row">
                                 <div class="form-question--radioBox w-100 form-control--container">
                                     <button type="button" class="btn--remove-asw-field">
@@ -206,19 +206,20 @@
                                     <button type="button" class="btn--add-radio-field">
                                         <i class="far fa-plus-square"></i>
                                     </button>
-                                    <div class="form-radio-check w-100">
-                                        <input type="radio" name="group-radio-0" id="ques-radio-0" class="form-radioCheck-input">                                       
-                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" value="Radio box description">
+                                    <!-- item 0 -->
+                                    <div class="form-check--container row">
+                                        <input type="radio" name="group-radio-0" id="ques-radio-0" class="form-check--input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
                                     </div> 
-                                    
-                                    <div class="form-radio-check w-100">
-                                        <input type="radio" name="group-radio-0" id="ques-radio-1" class="form-radioCheck-input">                                       
-                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" value="Radio box description">
+                                    <!-- item 1 -->
+                                    <div class="form-check--container">
+                                        <input type="radio" name="group-radio-0" id="ques-radio-1" class="form-check--input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
                                     </div>
-
-                                    <div class="form-radio-check w-100">
-                                        <input type="radio" name="group-radio-0" id="ques-radio-2" class="form-radioCheck-input">                                       
-                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" value="Radio box description">
+                                    <!-- item 2 -->
+                                    <div class="form-check--container">
+                                        <input type="radio" name="group-radio-0" id="ques-radio-2" class="form-check--input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
                                     </div>
                                 </div>
                             </div>
@@ -226,6 +227,34 @@
                         <!-- Questin radio end -->
 
                         <!-- Questin checkbox begin -->
+                        <!-- Item 0 -->
+                        <div class="form-question--check-group">
+                            <div class="row">
+                                <div class="form-question--radioBox w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <div class="form-check--container">
+                                        <input type="checkbox" name="group-checkbox-0" id="ques-checkbox-0" class="form-check--input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Item 1 -->
+                        <div class="form-question--check-group">
+                            <div class="row">
+                                <div class="form-question--radioBox w-100 form-control--container">
+                                    <button type="button" class="btn--remove-asw-field">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                    <div class="form-check--container">
+                                        <input type="checkbox" name="group-checkbox-1" id="ques-checkbox-1" class="form-check--input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>
                         <!-- Questin checkbox end -->
                     </div>
                 </form>
@@ -233,6 +262,7 @@
         </div>
     </section>
     <!-- Form body--question end -->
-
+<!-- Script file -->
+<script src="../asset/js/form.js"></script>
 </body>
 </html>
