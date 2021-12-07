@@ -6,6 +6,7 @@ const formQuestionBody = document.getElementById("form-question--body");
 
 /*---------------Add and delete inputBox-----------*/ 
 (() => {
+    /*---Add---*/ 
     const addInput = document.querySelector(".add-input");
 
     addInput.addEventListener("click", () => {
@@ -20,7 +21,7 @@ const formQuestionBody = document.getElementById("form-question--body");
         inputBox.classList.add("form-question--inputBox-group");
         inputBox.innerHTML=`
         <div class="form-question--inputBox w-100 form-control--container">
-            <button type="button" class="btn--remove-asw-field">
+            <button type="button" class="btn--remove-asw-field" id="btn--remove-input-${i}">
                 <i class="fas fa-trash-alt"></i>
             </button>
             <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Input box description">
@@ -29,4 +30,6 @@ const formQuestionBody = document.getElementById("form-question--body");
         i++;
         formQuestionBody.appendChild(inputBox);
     }
+
+
 })();
