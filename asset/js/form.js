@@ -330,7 +330,7 @@ const formQuestionBody = document.getElementById("form-question--body");
         createRadioBox();
     })
 
-    let i=1;
+    let i=0;
     function createRadioBox() {
         radioBox = document.createElement("div");
 
@@ -364,7 +364,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", addRadioItem);
         });
     };
-    reload();
+    // reload();
     
     /*---Remove---*/
     function deleteRadioBox(event) {
@@ -379,7 +379,19 @@ const formQuestionBody = document.getElementById("form-question--body");
 
     /*---Add radio item---*/
     function addRadioItem(event) {
-        console.log("Henlu");
+        // X = id number of button-add-radioItem clicked
+        let x = event.target.id.replace("btn--add-radioItem-", "");
+
+        const formQuesRadioBox = document.getElementById("form-question--radioBox-"+(x));
+
+        radioBoxItem = document.createElement("div");
+
+        radioBoxItem.classList.add("form-check--container", "row");
+        radioBoxItem.innerHTML = `
+        <input type="radio" name="group-radio-${x}" class="form-check--input">                                       
+        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">`;
+
+        formQuesRadioBox.appendChild(radioBoxItem);
     } 
 })();
 

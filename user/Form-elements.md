@@ -94,6 +94,24 @@
                         </div>
 <!-- Question input end -->
 
+<!-- Question radio begin -->
+                        <div class="form-question--radio-group" id="form-question--radio-group-0">
+                            <div class="row">
+                                <div id="form-question--radioBox-0" class="form-question--radioBox w-100 form-control--container">
+                                    <button type="button" id="btn--remove-radioBox-0" class="btn--remove-radioBox btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <button type="button" id="btn--add-radioItem-0" class="btn--add-radioItem btn--add-radio-field far fa-plus-square">
+                                    </button>
+                                    <!--radio item-->
+                                    <div class="form-check--container row">
+                                        <input type="radio" name="group-radio-0" class="form-check--input">                                       
+                                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- Question radio end -->
+
 <!-- Question checkbox begin -->
                         <div class="form-question--checkbox-group" id="form-question--checkbox-group-0">
                             <div class="row">
