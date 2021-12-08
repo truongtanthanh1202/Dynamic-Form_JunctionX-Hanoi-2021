@@ -2,6 +2,35 @@
     Form.html
 ---------------------*/ 
 const formQuestionBody = document.getElementById("form-question--body");
+/*---------------Add and delete Personal-info group-----------*/
+(()=>{
+    /*---Add group---*/
+    const addPersonInfoGroup = document.querySelector(".add-personal-info");
+
+    addPersonInfoGroup.addEventListener("click", () => {
+        createPersonInfoGroup();
+    });  
+
+    let i=1;
+    function createPersonInfoGroup(){
+        PersonInfoGroup = document.createElement("div");
+
+        PersonInfoGroup.classList.add("form-question--checkbox-group");
+        PersonInfoGroup.setAttribute("id", "form-question--checkbox-group-"+(i))
+        PersonInfoGroup.innerHTML=``;
+        i++;
+        formQuestionBody.appendChild(PersonInfoGroup);
+        reload();
+    }
+
+    /*---Reload and add Click event for many btn-remove*/
+    const reload = () => {
+        [...document.querySelectorAll(".btn--remove-checkbox")].forEach((btn) => {
+            btn.addEventListener("click", deleteCheckBox);
+        });
+    }; 
+})();
+
 /*---------------Add and delete Question Title-----------*/ 
 (()=>{
     /*---Add---*/ 
@@ -50,6 +79,7 @@ const formQuestionBody = document.getElementById("form-question--body");
         reload();
     }
 })();
+
 /*---------------Add and delete Question Description-----------*/
 (()=>{
     /*---Add---*/ 
@@ -146,6 +176,11 @@ const formQuestionBody = document.getElementById("form-question--body");
         });
     };
     // reload();
+})();
+
+/*---------------Add and delete radio group-----------*/
+(()=>{
+
 })();
 
 /*---------------Add and delete checkBox group-----------*/ 

@@ -65,6 +65,8 @@
     border-radius: 5px;
 }
 .main-header .register--btn a{
+    position: relative;
+    z-index: 1;
     font-size: 16px;
     color: var(--text-black-600);
 }
