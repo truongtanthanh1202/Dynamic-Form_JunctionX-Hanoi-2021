@@ -272,7 +272,10 @@ input.disabled{
 .form-question--inputBox-group{
     padding: 8px 0;
 }
-.form-question--check-group{
+.form-question--radio-group{
+    padding: 8px 0;
+}
+.form-question--checkbox-group{
     padding: 8px 0;
 }
 .form-control--descript{
@@ -322,13 +325,11 @@ input.disabled{
 .btn--add-radio-field i{
     cursor: pointer;
 }
-.btn--remove-asw-field i{
-    cursor: pointer;
-}
 .btn--remove-asw-field{
     position: absolute;
     top: 50%;
     left: 0px;
+    cursor: pointer;
 }
 /*-------------
  Custom other 

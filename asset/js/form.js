@@ -35,8 +35,6 @@ const formQuestionBody = document.getElementById("form-question--body");
     /*---Remove---*/
 
     function deleteInputBox(event) {
-        console.log("hello");
-        console.log(event.target);
         const currentContainer = [...document.querySelectorAll(".form-question--inputBox-group")].find(
             (container) =>
                 container.id.replace("form-question--inputBox-group-", "") ===
@@ -53,3 +51,56 @@ const formQuestionBody = document.getElementById("form-question--body");
     };
     // reload();
 })();
+
+/*---------------Add and delete checkBox group-----------*/ 
+(()=> {
+    /*---Add---*/
+    const addcheckBoxGroup = document.querySelector(".add-checkbox");
+
+    addcheckBoxGroup.addEventListener("click", () => {
+        createCheckBox();
+    })
+
+    let i=0;
+    function createCheckBox() {
+        checkBox = document.createElement("div");
+
+        checkBox.classList.add("form-question--checkbox-group");
+        checkBox.setAttribute("id", "form-question--checkbox-group-"+(i))
+        checkBox.innerHTML=`
+        <div class="row">
+            <div class="form-question--radioBox w-100 form-control--container">
+            <button type="button" class="btn--remove-asw-field btn--remove-checkbox fas fa-trash-alt" id="btn--remove-checkbox-${i}">
+            </button>
+            <div class="form-check--container">
+                <input type="checkbox" name="group-checkbox-${i}" id="ques-checkbox-${i}" class="form-check--input">                                       
+                <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
+            </div> 
+            </div>
+        </div>`;
+        i++;
+        formQuestionBody.appendChild(checkBox);
+        reload();
+    }
+
+    /*Reload*/ 
+    const reload = () => {
+        [...document.querySelectorAll(".btn--remove-checkbox")].forEach((btn) => {
+            btn.addEventListener("click", deleteCheckBox);
+        });
+    };
+
+    /*---Remove---*/ 
+    function deleteCheckBox(event) {
+        console.log("hello");
+        console.log(event.target);
+        const currentContainer = [...document.querySelectorAll(".form-question--checkbox-group")].find(
+            (container) =>
+                container.id.replace("form-question--checkbox-group-", "") ===
+                event.target.id.replace("btn--remove-checkbox-", "")
+        );
+        currentContainer.remove();
+        reload();
+    }
+    // reload();
+})(); 

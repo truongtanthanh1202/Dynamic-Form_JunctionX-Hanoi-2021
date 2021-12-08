@@ -197,10 +197,10 @@
     top: 24%;
     right: -42px;
 }
-.add-checkbox{
+.add-radio{
     position: relative;
 }
-.add-checkbox:hover::after{
+.add-radio:hover::after{
     font-size: 12px;
     content: 'Radio with Description';
     color: var(--bg-black-50);
@@ -214,10 +214,10 @@
     top: 24%;
     right: -134px;
 }
-.add-checkbox-descript{
+.add-checkbox{
     position: relative;
 }
-.add-checkbox-descript:hover::after{
+.add-checkbox:hover::after{
     font-size: 12px;
     content: 'Checkbox with Description';
     color: var(--bg-black-50);
