@@ -320,14 +320,13 @@ input.disabled{
     background-color: var(--white-color);
     position: absolute;
     bottom: -12px;
-    left: 0px;
-}
-.btn--add-radio-field i{
+    left: 6px;
     cursor: pointer;
 }
 .btn--remove-asw-field{
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     left: 0px;
     cursor: pointer;
 }

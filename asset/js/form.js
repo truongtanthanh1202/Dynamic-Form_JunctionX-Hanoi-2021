@@ -11,7 +11,7 @@ const formQuestionBody = document.getElementById("form-question--body");
         createPersonInfoGroup();
     });  
 
-    let i=1;
+    let i=0;
     function createPersonInfoGroup(){
         PersonInfoGroup = document.createElement("div");
 
@@ -99,7 +99,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             works.addEventListener("click", deleteWorks);
         });
     };
-    reload();
+    // reload();
     
     /*---Remove element item----*/
     // Remove fullName
@@ -323,7 +323,64 @@ const formQuestionBody = document.getElementById("form-question--body");
 
 /*---------------Add and delete radio group-----------*/
 (()=>{
+    /*---Add group---*/
+    const addRadioGroup = document.querySelector(".add-radio");
 
+    addRadioGroup.addEventListener("click", () => {
+        createRadioBox();
+    })
+
+    let i=1;
+    function createRadioBox() {
+        radioBox = document.createElement("div");
+
+        radioBox.classList.add("form-question--radio-group");
+        radioBox.setAttribute("id", "form-question--radio-group-"+(i))
+        radioBox.innerHTML=`
+        <div class="row">
+            <div id="form-question--radioBox-${i}" class="form-question--radioBox w-100 form-control--container">
+                <button type="button" id="btn--remove-radioBox-${i}" class="btn--remove-radioBox btn--remove-asw-field fas fa-trash-alt">
+                </button>
+                <button type="button" id="btn--add-radioItem-${i}" class="btn--add-radioItem btn--add-radio-field far fa-plus-square">
+                </button>
+                <!--radio item-->
+                <div class="form-check--container row">
+                    <input type="radio" name="group-radio-${i}" class="form-check--input">                                       
+                    <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Radio box description">
+                </div>
+            </div>
+        </div>`;
+        i++;
+        formQuestionBody.appendChild(radioBox);
+        reload();
+    }
+
+    /*---Reload---*/
+    const reload = () => {
+        [...document.querySelectorAll(".btn--remove-radioBox")].forEach((btn) => {
+            btn.addEventListener("click", deleteRadioBox);
+        });
+        [...document.querySelectorAll(".btn--add-radioItem")].forEach((btn) => {
+            btn.addEventListener("click", addRadioItem);
+        });
+    };
+    reload();
+    
+    /*---Remove---*/
+    function deleteRadioBox(event) {
+        const currentContainer = [...document.querySelectorAll(".form-question--radio-group")].find(
+            (container) =>
+                container.id.replace("form-question--radio-group-", "") ===
+                event.target.id.replace("btn--remove-radioBox-", "")
+        );
+        currentContainer.remove();
+        reload();
+    } 
+
+    /*---Add radio item---*/
+    function addRadioItem(event) {
+        console.log("Henlu");
+    } 
 })();
 
 /*---------------Add and delete checkBox group-----------*/ 
@@ -366,8 +423,6 @@ const formQuestionBody = document.getElementById("form-question--body");
 
     /*---Remove---*/ 
     function deleteCheckBox(event) {
-        console.log("hello");
-        console.log(event.target);
         const currentContainer = [...document.querySelectorAll(".form-question--checkbox-group")].find(
             (container) =>
                 container.id.replace("form-question--checkbox-group-", "") ===

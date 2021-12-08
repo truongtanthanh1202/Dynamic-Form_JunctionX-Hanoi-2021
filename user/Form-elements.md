@@ -1,3 +1,60 @@
+<!-- Personal info group begin -->
+                        <div class="form-question--personal-info-group" id="form-question--personal-info-group-0">
+                            <div class="row">
+                                <!-- name -->
+                                <div id="form-question--fullName-0" class="form-question--fullName w-50 form-control--container">
+                                    <button type="button" id="btn--remove-fullName-0" class="btn--remove-fullName btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Full name">
+                                    <input type="text" name="user-0-fullName" id="user-0-fullName" class="form-control" required>
+                                </div>
+                                <!-- email -->
+                                <div id="form-question--email-0" class="form-question--email w-50 form-control--container">
+                                    <button type="button" id="btn--remove-email-0" class="btn--remove-email btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Email">
+                                    <input type="email" name="user-0-email" id="user-0-email" class="form-control" placeholder="email@domain.com" required>
+                                </div>
+                                <!-- birthday -->
+                                <div id="form-question--birthday-0" class="form-question--birthday w-50 form-control--container">
+                                    <button type="button" id="btn--remove-birthday-0" class="btn--remove-birthday btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Birthday">
+                                    <input type="date" name="user-0-birthday" id="user-0-birthday" class="form-control" required>
+                                </div>
+                                <!-- phone -->
+                                <div id="form-question--phone-0" class="form-question--phone w-50 form-control--container">
+                                    <button type="button" id="btn--remove-phone-0" class="btn--remove-phone btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Phone number">
+                                    <input type="tel" name="user-0-phone" id="user-0-phone" class="form-control" pattern="[0-9]{10}" placeholder="0123456789" required>
+                                </div>
+                                <!-- address -->
+                                <div id="form-question--address-0" class="form-question--address w-100 form-control--container">
+                                    <button type="button" id="btn--remove-address-0" class="btn--remove-address btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Address">
+                                    <input type="text" name="user-0-address" id="user-0-address" class="form-control" placeholder="Street - City - Country" required>
+                                </div>
+                                <!-- CCCD -->
+                                <div id="form-question--CCCD-0" class="form-question--CCCD w-50 form-control--container">
+                                    <button type="button" id="btn--remove-CCCD-0" class="btn--remove-CCCD btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Cityzen Indentify number">
+                                    <input type="number" name="user-0-CCCD" id="user-0-CCCD" class="form-control" required>
+                                </div>
+                                <!-- works -->
+                                <div id="form-question--works-0" class="form-question--works w-100 form-control--container">
+                                    <button type="button" id="btn--remove-works-0" class="btn--remove-works btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <input type="text" name="input-descript" id="input-descript" class="form-control--descript" value="Works">
+                                    <input type="text" name="user-0-works" id="user-0-works" class="form-control" placeholder="Company Name" required>
+                                </div>
+                                <div class="form--endline--inner"></div>
+                            </div>
+                        </div>
+<!-- Personal info group end -->
+
 <!-- Question title begin -->
                         <div class="form-question--titleBox-group" id="form-question--titleBox-group-0">
                             <div class="row">
