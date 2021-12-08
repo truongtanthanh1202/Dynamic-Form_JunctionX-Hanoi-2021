@@ -2,6 +2,102 @@
     Form.html
 ---------------------*/ 
 const formQuestionBody = document.getElementById("form-question--body");
+/*---------------Add and delete Question Title-----------*/ 
+(()=>{
+    /*---Add---*/ 
+    const addQuesTitle = document.querySelector(".add-title");
+
+    addQuesTitle.addEventListener("click", () => {
+        createQuesTitle();
+    });
+
+    let i=0;
+    function createQuesTitle() {
+        quesTitle = document.createElement("div");
+
+        quesTitle.classList.add("form-question--titleBox-group");
+        quesTitle.setAttribute("id", "form-question--titleBox-group-"+(i))
+        quesTitle.innerHTML=`
+        <div class="row">
+            <div class="form-question--titleBox w-100 form-control--container">
+                <button type="button" class="btn--remove-asw-field btn--remover-quesTitle fas fa-trash-alt" id="btn--remover-quesTitle-${i}">
+                </button>
+                <input type="text" name="question--title-${i}" id="question--title-${i}" class="question--title" placeholder="Question Title">
+                 <div class="section--endline--inner"></div>
+            </div>
+        </div>`;
+        i++;
+        formQuestionBody.appendChild(quesTitle);
+        reload();
+    }
+
+    /*---Reload---*/
+    const reload = () => {
+        [...document.querySelectorAll(".btn--remover-quesTitle")].forEach((btn) => {
+            btn.addEventListener("click", deleteQuesTitle);
+        });
+    };
+    // reload();
+
+    /*---Remove---*/ 
+    function deleteQuesTitle(event) {
+        const currentContainer = [...document.querySelectorAll(".form-question--titleBox-group")].find(
+            (container) =>
+                container.id.replace("form-question--titleBox-group-", "") ===
+                event.target.id.replace("btn--remover-quesTitle-", "")
+        );
+        currentContainer.remove();
+        reload();
+    }
+})();
+/*---------------Add and delete Question Description-----------*/
+(()=>{
+    /*---Add---*/ 
+    const addDescriptTitle = document.querySelector(".add-description");
+
+    addDescriptTitle.addEventListener("click", () => {
+        createDescriptTitle();
+    });
+
+    let i=0;
+    function createDescriptTitle() {
+        DescriptTitle = document.createElement("div");
+
+        DescriptTitle.classList.add("form-question--descriptBox-group");
+        DescriptTitle.setAttribute("id", "form-question--descriptBox-group-"+(i))
+        DescriptTitle.innerHTML=`
+        <div class="row">
+            <div class="form-question--descriptBox w-100 form-control--container">
+                <button type="button" id="btn--remove-quesDescript-${i}" class="btn--remove-asw-field btn--remove-quesDescript fas fa-trash-alt">
+                </button>
+                <input type="text" name="question-descript-${i}" id="question-descript-${i}" class="form-control--descript" placeholder="Question description">
+                <div class="section--endline--inner"></div>
+            </div>
+        </div>`;
+        i++;
+        formQuestionBody.appendChild(DescriptTitle);
+        reload();
+    }
+
+    /*---Reload---*/
+    const reload = () => {
+        [...document.querySelectorAll(".btn--remove-quesDescript")].forEach((btn) => {
+            btn.addEventListener("click", deleteDescriptTitle);
+        });
+    };
+    // reload();
+
+    /*---Remove---*/ 
+    function deleteDescriptTitle(event) {
+        const currentContainer = [...document.querySelectorAll(".form-question--descriptBox-group")].find(
+            (container) =>
+                container.id.replace("form-question--descriptBox-group-", "") ===
+                event.target.id.replace("btn--remove-quesDescript-", "")
+        );
+        currentContainer.remove();
+        reload();
+    }
+})();
 
 /*---------------Add and delete inputBox-----------*/ 
 (() => {
