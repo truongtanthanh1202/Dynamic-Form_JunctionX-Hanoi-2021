@@ -52,7 +52,7 @@
 
         width: 300px;
         
-        background-color: var(bg-black-50);
+        background-color: #fff;
         transform: translateX(-100%);
         transition: transform linear 0.2s;
 
@@ -77,7 +77,7 @@
     .navigation .abt-nav-mobile .abt-nav--item{
         width: 100%;
         padding: 8px 16px;
-        margin-bottom: 4px;
+        margin-bottom: 16px;
     }
     /* Overview */
      .overview-section .overview--text, .overview-section .overview--text h2{
