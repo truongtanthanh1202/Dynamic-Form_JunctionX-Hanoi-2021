@@ -29,7 +29,7 @@
                 </div>
                 <div class="form-header--submit row">
                     <div class="btn-send form-header--item outer-shadow hover-in-shadow">
-                        <a href="#">Send</a>
+                        <a>Send</a>
                     </div>
                     <div class="user-avata form-header--item">
                         <img src="../asset/img/user/user-avt-main.png" alt="">
@@ -102,6 +102,27 @@
         </div>
     </section>
     <!-- Form body--question end -->
+
+    <!-- Send Form popup begin -->
+    <section class="form-sending-popup">
+        <div class="sending-popup--container">
+            <div class="sending-popup--header row justify-content-between">
+                <div class="sending-popup--text">
+                    <h3>Send form</h3>
+                </div>
+                <div class="sending-popup--close-btn">&times;</div>
+            </div>
+            <div class="section--endline--inner"></div>
+            <div class="sending-popup--body">
+                <h4>Link <span class="fas fa-link"></span></h4>
+                <input onClick="this.setSelectionRange(0, this.value.length)" class="link-sendForm" type="url" value="http://EZexample.com" readonly>
+            </div>
+            <div class="sending-popup--footer">
+                <button class="sending-popup--copyLink outer-shadow hover-in-shadow">Copy</button>
+            </div>
+        </div>
+    </section>
+    <!-- Send Form popup end -->
 <!-- Script file -->
 <script src="../asset/js/form.js"></script>
 </body>

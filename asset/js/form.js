@@ -1,6 +1,29 @@
 /*-------------------
     Form.html
 ---------------------*/ 
+/*---------------Send Form popup-----------*/
+(()=>{
+    const btnSendForm = document.querySelector(".btn-send");
+    const closeSendForm = document.querySelector(".sending-popup--close-btn")
+    btnSendForm.addEventListener("click", ()=>{
+        popupSendForm();
+    });
+    closeSendForm.addEventListener("click", ()=>{
+        popupSendForm();
+    });
+
+    function popupSendForm() {
+        document.querySelector(".form-sending-popup").classList.toggle("active");        
+    }
+
+    /*---Copy input.value() when click btn-Copy to clipBoard---*/
+    const inputLinkSend = document.querySelector(".link-sendForm"); 
+    const copyLinkSend = document.querySelector(".sending-popup--copyLink");
+    copyLinkSend.addEventListener("click", () => {
+        navigator.clipboard.writeText(inputLinkSend.value);
+    });
+})();
+
 const formQuestionBody = document.getElementById("form-question--body");
 /*---------------Add and delete Personal-info group-----------*/
 (()=>{
