@@ -162,12 +162,64 @@ Dashboard templates begin
 /* -----------------------
 Dashboard User's Form begin
 ------------------------*/
-/* .dashboard-userForm{}
-.dashboard-userForm--container{} */
-.dashboard-userForm--text{
-    padding: 16px;
+.dashboard-userForm{
+    margin-bottom: 64px;
 }
-.dashboard-userForm--text h4{
+.dashboard-userForm--container{
+    background-color: var(--white-color);
+}
+.dashboard-userForm .dashboard-userForm--text{
+    padding: 20px;
+}
+.dashboard-userForm .dashboard-userForm--text h4{
     font-weight: 600;
 }
+.userForm-item--container{
+    padding: 2px;
+    border: 1px solid var(--boder-color);
+    margin: 10px;
+
+    border-radius: 2px;
+    cursor: pointer;
+    display: block;
+    transition: all 0.3s ease;
+}
+.userForm-item--container:hover{
+    box-shadow: none;
+}
+.userForm-item--img{
+    width: 200px;
+    border-bottom: 1px solid var(--boder-color);
+}
+.userForm-item--img img{
+    width: 100%;
+    border-radius: 2px;
+    padding: 4px 4px 16px 4px;
+}
+.userForm-item--deatails{
+    padding: 16px 8px 14px 16px;
+}
+.userForm-item--deatails input{
+    border: none;
+    width: 100%;
+    font-size: 14px;
+    line-height: 18px;
+
+    letter-spacing: 0.15px;
+    color: var(--text-black-700);
+    font-weight: 600; 
+    margin: 0 0 3px 0;
+}
+.userForm-item--nav{
+    padding: 2px 0;
+}
+.userForm-item--nav span{
+    color: var(--skin-color);
+    cursor: text;
+}
+.userForm-item--nav button{
+    cursor: pointer;
+    margin-left: 100px;
+}
+
 /* Dashboard User's Form end */
