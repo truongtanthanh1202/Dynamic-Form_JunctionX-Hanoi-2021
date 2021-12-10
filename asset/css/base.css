@@ -320,8 +320,23 @@ input.disabled{
     background-color: var(--white-color);
     position: absolute;
     bottom: -12px;
-    left: 6px;
+    left: 30px;
     cursor: pointer;
+}
+.btn--add-radio-field:hover::after{
+    font-size: 12px;
+    content: 'Add more item';
+    color: var(--white-color);
+
+    display: block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: var(--text-black-700);
+
+    font-family: 'Nunito Sans','Raleway', sans-serif;;
+    position: absolute;
+    top: 20%;
+    right: -92px;
 }
 .btn--remove-asw-field{
     position: absolute;
@@ -329,6 +344,28 @@ input.disabled{
     transform: translateY(-50%);
     left: 0px;
     cursor: pointer;
+}
+.btn--require-asw-field{
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    left: 0px;
+    cursor: pointer;
+}
+.btn--require-asw-field:hover::after{
+    font-size: 12px;
+    content: 'Remove require for this field';
+    color: var(--white-color);
+
+    display: block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: var(--text-black-700);
+
+    font-family: 'Nunito Sans','Raleway', sans-serif;;
+    position: absolute;
+    top: 20%;
+    left: -170px;
 }
 /*-------------
  Custom other 

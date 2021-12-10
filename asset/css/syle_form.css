@@ -401,6 +401,31 @@
     cursor: pointer;
 }
 /* ---------------------
+    Form-body Qustion
+----------------------- */
+.form-question--titleBox-group{
+    margin: 6px 0;
+}
+.form-question--descriptBox-group{
+    margin: 4px 0;
+}
+.form-question--inputBox-group{
+    margin: 6px 0;
+}
+.form-question--radio-group{
+    margin: 6px 0;
+}
+.form-question--checkbox-group{
+    margin: 0;
+}
+.btn--require-radioBox{
+    position: absolute;
+    top: 110%;
+    transform: translateY(-50%);
+    left: 0px;
+    cursor: pointer;
+}
+/* ---------------------
     Form-body Responses
 ----------------------- */
 .form-body .form-body-responses{ 
