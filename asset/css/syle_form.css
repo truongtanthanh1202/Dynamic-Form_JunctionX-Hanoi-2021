@@ -403,7 +403,8 @@
 /* ---------------------
     Form-body Responses
 ----------------------- */
-.form-body .form-body-responses{
+.form-body .form-body-responses{ 
+    border: 1px solid var(--boder-color);
     padding: 15px 24px;
     border-radius: 5px;
     background-color: var(--white-color);
