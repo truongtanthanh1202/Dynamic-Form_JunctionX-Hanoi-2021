@@ -1,6 +1,35 @@
+/*---Popup Question-section and Response-section*/ 
+(()=>{
+    const quesSection = document.querySelector(".view--question"),
+        formQuesBody = document.querySelector(".form-body--questions");
+    const resSection = document.querySelector(".view--response"),
+        formResBody = document.querySelector(".form-body-responses")
+
+    quesSection.addEventListener("click", ()=>{
+        if (!quesSection.classList.contains("active")) {
+            quesSection.classList.add("active");
+            resSection.classList.remove("active");
+
+            formQuesBody.classList.add("show"); formQuesBody.classList.remove("hide");
+            formResBody.classList.add("hide"); formResBody.classList.remove("show");
+        }
+    });
+
+    resSection.addEventListener("click", ()=>{
+        if (!resSection.classList.contains("active")) {
+            resSection.classList.add("active");
+            quesSection.classList.remove("active");
+
+            formResBody.classList.add("show"); formResBody.classList.remove("hide");
+            formQuesBody.classList.add("hide"); formQuesBody.classList.remove("show");
+        }
+    });
+})();
+
 /*-------------------
-    Form.html
+    Create Form
 ---------------------*/ 
+
 /*---------------Send Form popup-----------*/
 (()=>{
     const btnSendForm = document.querySelector(".btn-send");
@@ -468,3 +497,7 @@ const formQuestionBody = document.getElementById("form-question--body");
     }
     // reload();
 })(); 
+
+/*-------------------
+    View Response
+---------------------*/

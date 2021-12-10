@@ -126,6 +126,15 @@
 .form-body .form-body--questions{
     position: relative;
     padding: 0 10px;
+    transition: all 0.3s ease;
+}
+.form-body .form-body--questions.hide{
+    display: none;
+    visibility: hidden;
+}
+.form-body .form-body--questions.show{
+    display: block;
+    visibility: visible;
 }
 /* Form-body-navigation begin */
 .form-body .form-body--questions .form-question--nav{
@@ -390,4 +399,71 @@
     float: right;
     right: 0;
     cursor: pointer;
+}
+/* ---------------------
+    Form-body Responses
+----------------------- */
+.form-body .form-body-responses{
+    padding: 15px 24px;
+    border-radius: 5px;
+    background-color: var(--white-color);
+    transition: all 0.3s ease;
+}
+.form-body .form-body-responses.hide{
+    display: none;
+    visibility: hidden;
+}
+.form-body .form-body-responses.show{
+    display: block;
+    visibility: visible;
+}
+.form-body-responses .report-item{
+    flex: 0 0 calc(100% / 3);
+    max-width: calc(100% / 3);
+    padding: 15px;
+
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-body-responses .report-item-inner{
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.form-body-responses .report-item-inner p{
+    font-size: 16px;
+    margin: 10px 0 0;
+    color: var(--text-black-600);
+    text-transform: capitalize;
+}
+.form-body-responses .report-item-img img{
+    border-radius: 5px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+.form-body-responses .report-item-inner:hover .report-item-img img{
+    transform: translateY(-25px);
+}
+.form-body-responses .report-item-img{
+    position: relative;
+}
+.form-body-responses .report-item-img .view-report{
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--skin-color);
+    text-transform: capitalize;
+    
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transform: translateY(-5px);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+.form-body-responses .report-item-inner:hover .view-report{
+    z-index: 0;
+    opacity: 1;
+    transform: translateY(0px);
 }
