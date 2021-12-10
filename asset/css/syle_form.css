@@ -57,6 +57,41 @@
     font-size: 18px;
     color: var(--text-black-600);
 }
+.form-header .btn-preview-form{
+    padding: 8px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    position: relative;
+
+    margin-right: 8px;
+    border-radius: 50%;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.form-header .btn-preview-form:hover{
+    border: 1px solid var(--boder-color);
+}
+.form-header .btn-preview-form:hover::before{
+    font-size: 12px;
+    content: 'Preview';
+    color: var(--white-color);
+
+    display: block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: var(--text-black-700);
+
+    position: absolute;
+    top: 116%;
+    left: -5px;
+}
+.form-header .btn-preview-form::after{
+    border-radius: 50%;
+}
+.form-header .btn-preview-form i{
+    font-size: 20px;
+    color: var(--text-black-700);
+}
 .form-header .btn-send{
     padding: 8px 24px;
     border-radius: 4px;
