@@ -276,7 +276,7 @@ input.disabled{
     padding: 8px 0;
 }
 .form-question--checkbox-group{
-    padding: 8px 0;
+    padding: 4px 0;
 }
 .form-control--descript{
     display: inline-block;
@@ -344,6 +344,7 @@ input.disabled{
     transform: translateY(-50%);
     left: 0px;
     cursor: pointer;
+    background-color: var(--white-color);
 }
 .btn--require-asw-field{
     position: absolute;
@@ -351,10 +352,11 @@ input.disabled{
     transform: translateY(-100%);
     left: 0px;
     cursor: pointer;
+    background-color: var(--white-color);
 }
-.btn--require-asw-field:hover::after{
+.btn--require-asw-field.fa-exclamation-circle:hover::after{
     font-size: 12px;
-    content: 'Remove require for this field';
+    content: 'Remove required for this field';
     color: var(--white-color);
 
     display: block;
@@ -365,7 +367,22 @@ input.disabled{
     font-family: 'Nunito Sans','Raleway', sans-serif;;
     position: absolute;
     top: 20%;
-    left: -170px;
+    left: -174px;
+}
+.btn--require-asw-field.fa-calendar-check:hover::after{
+    font-size: 12px;
+    content: 'Add required for this field';
+    color: var(--white-color);
+
+    display: block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background-color: var(--text-black-700);
+
+    font-family: 'Nunito Sans','Raleway', sans-serif;;
+    position: absolute;
+    top: 20%;
+    left: -158px;
 }
 /*-------------
  Custom other 
