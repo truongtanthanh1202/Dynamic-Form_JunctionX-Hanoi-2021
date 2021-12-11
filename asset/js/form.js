@@ -686,7 +686,7 @@ const formQuestionBody = document.getElementById("form-question--body");
                 <div id="form-dropDown-box-${i}" class="form-check--container row">
                     <input type="text" onClick="this.setSelectionRange(0, this.value.length)" name="input-descript" id="input-descript" class="form-control--descript" value="Drop down title">
                     <div class="form--dropDown-item">
-                        1.                                      
+                        &bull;                                      
                         <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Drop down item description">
                     </div>
                 </div>
@@ -719,7 +719,6 @@ const formQuestionBody = document.getElementById("form-question--body");
         reload();
     } 
     /*---add dropdown item---*/
-    let j=2; 
     function addDropdownItem(event) {
         // X = id number of button-add-dropDownItem clicked
         let x = event.target.id.replace("btn--add-dropDownItem-", "");
@@ -730,9 +729,8 @@ const formQuestionBody = document.getElementById("form-question--body");
 
         dropDownItem.classList.add("form--dropDown-item");
         dropDownItem.innerHTML = `
-        ${j}.                                      
+        &bull;                                      
         <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Drop down item description">`;
-        j++;
         formDropDownBox.appendChild(dropDownItem);
     } 
 })();
