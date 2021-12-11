@@ -661,16 +661,80 @@ const formQuestionBody = document.getElementById("form-question--body");
 
 /*---------------Add and delete drop down group-----------*/ 
 (()=>{
+    /*---Add DROPDOWN GROUP*/ 
     const addDropDown = document.querySelector(".add-dropDown");
 
     addDropDown.addEventListener("click", () =>{
         createDropDown();
     });
 
-    let i=1;
+    let i=0;
     function createDropDown() {
-        console.log("Hải đần");
+        dropDownBox = document.createElement("div");
+
+        dropDownBox.classList.add("form-question--creatorDropdown-group");
+        dropDownBox.setAttribute("id", "form-question--creatorDropdown-group-"+(i))
+        dropDownBox.innerHTML=`
+        <div class="row">
+            <div class="w-100 form-control--container">
+                <button type="button" id="btn--remove-creatorDropdown-${i}" class="btn--remove-creatorDropdown btn--remove-asw-field fas fa-trash-alt">
+                </button>
+                <button type="button" id="btn--add-dropDownItem-${i}" class="btn--add-dropDownItem btn--add-radio-field far fa-plus-square">
+                </button>
+                
+                <!--drop down item-->
+                <div id="form-dropDown-box-${i}" class="form-check--container row">
+                    <input type="text" onClick="this.setSelectionRange(0, this.value.length)" name="input-descript" id="input-descript" class="form-control--descript" value="Drop down title">
+                    <div class="form--dropDown-item">
+                        1.                                      
+                        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Drop down item description">
+                    </div>
+                </div>
+            </div>
+        </div>`;
+        i++;
+        formQuestionBody.appendChild(dropDownBox);
+        reload();
     }
+ 
+    /*---Reload---*/
+    const reload = () => {
+        [...document.querySelectorAll(".btn--remove-creatorDropdown")].forEach((btn) => {
+            btn.addEventListener("click", deleteCreatorDropdown);
+        });
+        [...document.querySelectorAll(".btn--add-dropDownItem")].forEach((btn) => {
+            btn.addEventListener("click", addDropdownItem);
+        });
+    };
+    // reload();
+
+    /*---remove dropdown group---*/ 
+    function deleteCreatorDropdown(event) {
+        const currentContainer = [...document.querySelectorAll(".form-question--creatorDropdown-group")].find(
+            (container) =>
+                container.id.replace("form-question--creatorDropdown-group-", "") ===
+                event.target.id.replace("btn--remove-creatorDropdown-", "")
+        );
+        currentContainer.remove();
+        reload();
+    } 
+    /*---add dropdown item---*/
+    let j=2; 
+    function addDropdownItem(event) {
+        // X = id number of button-add-dropDownItem clicked
+        let x = event.target.id.replace("btn--add-dropDownItem-", "");
+
+        const formDropDownBox = document.getElementById("form-dropDown-box-"+(x));
+
+        dropDownItem = document.createElement("div");
+
+        dropDownItem.classList.add("form--dropDown-item");
+        dropDownItem.innerHTML = `
+        ${j}.                                      
+        <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Drop down item description">`;
+        j++;
+        formDropDownBox.appendChild(dropDownItem);
+    } 
 })();
 
 /*-------------------

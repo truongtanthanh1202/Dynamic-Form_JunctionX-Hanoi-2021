@@ -143,3 +143,26 @@
                             </div>
                         </div>
 <!-- Question checkbox end -->
+
+
+<!-- Question dropDown for Creator begin -->
+                        <div class="form-question--creatorDropdown-group" id="form-question--creatorDropdown-group-0">
+                            <div class="row">
+                                <div class="w-100 form-control--container">
+                                    <button type="button" id="btn--remove-creatorDropdown-0" class="btn--remove-creatorDropdown btn--remove-asw-field fas fa-trash-alt">
+                                    </button>
+                                    <button type="button" id="btn--add-dropDownItem-0" class="btn--add-dropDownItem btn--add-radio-field far fa-plus-square">
+                                    </button>
+                                    
+                                    <!--drop down item-->
+                                    <div id="form-dropDown-box-0" class="form-check--container row">
+                                        <input type="text" onClick="this.setSelectionRange(0, this.value.length)" name="input-descript" id="input-descript" class="form-control--descript" value="Drop down title">
+                                        <div class="form--dropDown-item">
+                                            1.                                      
+                                            <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Drop down item description">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<!-- Question dropDown for Creator end -->

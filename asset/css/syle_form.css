@@ -456,6 +456,15 @@
 .form-question--checkbox-group{
     margin: 0;
 }
+.form-question--dropDown-userUI{
+    margin: 6px 0;
+}
+.form-question--creatorDropdown-group{
+    margin: 6px 0;
+}
+.form--dropDown-item{
+    padding: 3px 0;
+}
 .btn--require-radioBox{
     position: absolute;
     top: 110%;
