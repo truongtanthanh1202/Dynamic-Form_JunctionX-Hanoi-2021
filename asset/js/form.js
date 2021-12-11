@@ -659,6 +659,20 @@ const formQuestionBody = document.getElementById("form-question--body");
     }
 })(); 
 
+/*---------------Add and delete drop down group-----------*/ 
+(()=>{
+    const addDropDown = document.querySelector(".add-dropDown");
+
+    addDropDown.addEventListener("click", () =>{
+        createDropDown();
+    });
+
+    let i=1;
+    function createDropDown() {
+        console.log("Hải đần");
+    }
+})();
+
 /*-------------------
     View Response
 ---------------------*/

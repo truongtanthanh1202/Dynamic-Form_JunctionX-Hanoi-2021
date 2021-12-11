@@ -190,6 +190,9 @@
     font-size: 16px;
     color: var(--text-black-700);
 }
+.form-body .form-body--questions .question-nav-item{
+    display: block;
+}
 .add-personal-info{
     position: relative;
 }
@@ -275,12 +278,12 @@
     top: 24%;
     right: -158px;
 }
-.add-checkbox-advancedOptions{
+.add-dropDown{
     position: relative;
 }
-.add-checkbox-advancedOptions:hover::after{
+.add-dropDown:hover::after{
     font-size: 12px;
-    content: 'Advanced options';
+    content: 'Drop down';
     color: var(--bg-black-50);
 
     display: block;
@@ -289,8 +292,8 @@
     background-color: var(--text-black-700);
 
     position: absolute;
-    top: 23%;
-    right: -110px;
+    top: 26%;
+    right: -72px;
 }
 .add-description{
     position: relative;

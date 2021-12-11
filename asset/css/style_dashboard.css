@@ -107,13 +107,14 @@ Dashboard templates begin
     padding: 2px;
     border: 1px solid var(--boder-color);
     cursor: pointer;
+    margin: 0 16px 7px 0;
 }
 .dashboard--create-form:hover{
     box-shadow: 3px 3px 3px #d0d0d0, -3px -3px 3px #f8f8f8;
 }
 .dashboard--create-form .create-form--box{
     width: 140px;
-    height: 140px;
+    height: 112px;
     text-align: center;
     margin-bottom: 8px;
 }
@@ -126,9 +127,6 @@ Dashboard templates begin
     margin-top: 20px;
     font-size: 16px;
     color: var(--text-black-600);
-}
-.dashboard-templates .dashboard-templates--items{
-    margin-left: 16px;
 }
 .dashboard-templates .template-item{
     display: inline-flex;

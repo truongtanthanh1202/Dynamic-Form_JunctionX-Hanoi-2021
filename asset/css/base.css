@@ -225,6 +225,11 @@ input.disabled{
     max-width: 50%;
     padding: 0 15px;
 }
+.w-70{
+    flex: 0 0 70%;
+    max-width: 70%;
+    padding: 0 15px;
+}
 .w-90{
     flex: 0 0 90%;
     max-width: 90%;
