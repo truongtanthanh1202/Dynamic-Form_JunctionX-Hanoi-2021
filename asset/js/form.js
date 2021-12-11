@@ -187,7 +187,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", toggleRequiredWorks);
         });
     };
-    // reload();
+    reload();
     
     /*---Remove element item----*/
     // Remove fullName
@@ -383,7 +383,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", deleteQuesTitle);
         });
     };
-    // reload();
+    reload();
 
     /*---Remove---*/ 
     function deleteQuesTitle(event) {
@@ -432,7 +432,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", deleteDescriptTitle);
         });
     };
-    // reload();
+    reload();
 
     /*---Remove---*/ 
     function deleteDescriptTitle(event) {
@@ -499,7 +499,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", toggleRequiredInputBox);
         });
     };
-    // reload();
+    reload();
 
      /*---Toggle required for this field---*/
      function toggleRequiredInputBox(e) {
@@ -564,7 +564,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", toggleRequiredRadioBox);
         });
     };
-    // reload();
+    reload();
     
     /*---Remove---*/
     function deleteRadioBox(event) {
@@ -706,7 +706,7 @@ const formQuestionBody = document.getElementById("form-question--body");
             btn.addEventListener("click", addDropdownItem);
         });
     };
-    // reload();
+    reload();
 
     /*---remove dropdown group---*/ 
     function deleteCreatorDropdown(event) {

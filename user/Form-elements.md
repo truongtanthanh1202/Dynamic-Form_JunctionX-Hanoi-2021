@@ -85,7 +85,7 @@
                         <div class="form-question--descriptBox-group" id="form-question--descriptBox-group-0">
                             <div class="row">
                                 <div class="form-question--descriptBox w-100 form-control--container">
-                                    <button type="button" id="btn--remover-quesDescript-0" class="btn--remove-asw-field btn--remover-quesDescript fas fa-trash-alt">
+                                    <button type="button" id="btn--remove-quesDescript-0" class="btn--remove-asw-field btn--remover-quesDescript fas fa-trash-alt">
                                     </button>
                                     <input type="text" name="question-descript-0" id="question-descript-0" class="form-control--descript" placeholder="Question description">
                                     <div class="section--endline--inner"></div>
@@ -158,7 +158,7 @@
                                     <div id="form-dropDown-box-0" class="form-check--container row">
                                         <input type="text" onClick="this.setSelectionRange(0, this.value.length)" name="input-descript" id="input-descript" class="form-control--descript" value="Drop down title">
                                         <div class="form--dropDown-item">
-                                            1.                                      
+                                            &bull;                                      
                                             <input type="text" name="input-descript" id="input-descript" class="form-check--descript" placeholder="Drop down item description">
                                         </div>
                                     </div>
